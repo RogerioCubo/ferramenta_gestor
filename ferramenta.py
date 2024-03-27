@@ -1,29 +1,17 @@
 import pandas as pd
 import streamlit as st
 
-# Definindo o caminho do arquivo
-caminho_parquet = r"C:\Users\Roger\Desktop\Atividade_Analista_Dados_BRItech_Rogerio\base_dados_final\cad_fi_website_pl_gestor_qtd_fundos.parquet"
+# Importando o arquivo para um DataFrame
+cad_fi_website_pl_gestor_qtd_fundos = pd.read_parquet('base_dados_final/cad_fi_website_pl_gestor_qtd_fundos.parquet')
 
 # Importando o arquivo para um DataFrame
-cad_fi_website_pl_gestor_qtd_fundos = pd.read_parquet(caminho_parquet)
-
-# Caminho do arquivo para "Gestoras Consolidado"
-caminho_gestoras_consolidado = r"C:\Users\Roger\Desktop\Atividade_Analista_Dados_BRItech_Rogerio\base_dados_final\gestoras_classe_fundos_atualizado.parquet"
+gestoras_classe_fundos_atualizado = pd.read_parquet('base_dados_final/gestoras_classe_fundos_atualizado.parquet')
 
 # Importando o arquivo para um DataFrame
-gestoras_classe_fundos_atualizado = pd.read_parquet(caminho_gestoras_consolidado)
-
-# Caminho do arquivo para "Concorrentes por Gestora"
-caminho_concorrentes_por_gestora = r"C:\Users\Roger\Desktop\Atividade_Analista_Dados_BRItech_Rogerio\base_dados_final\fr_final_tratado_sistemas_players_contagem_PL.parquet"
+concorrentes_por_gestora = pd.read_parquet('base_dados_final/fr_final_tratado_sistemas_players_contagem_PL.parquet')
 
 # Importando o arquivo para um DataFrame
-concorrentes_por_gestora = pd.read_parquet(caminho_concorrentes_por_gestora)
-
-# Caminho do arquivo para "Ranking de Players"
-caminho_ranking_players = r"C:\Users\Roger\Desktop\Atividade_Analista_Dados_BRItech_Rogerio\base_dados_final\ranking_players.parquet"
-
-# Importando o arquivo para um DataFrame
-ranking_players = pd.read_parquet(caminho_ranking_players)
+ranking_players = pd.read_parquet('base_dados_final/ranking_players.parquet')
 
 # Configuração do layout da página.
 st.set_page_config(layout="wide")
